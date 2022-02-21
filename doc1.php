@@ -10,6 +10,7 @@
     <body>"
         <h1> My first website</h1>
         <p> YOu can leave your comments. Enter the following information</p>
+        <html>
             <form action="doc1.php" method="post">
                 <label> Name </label>
                 <div>
@@ -29,18 +30,19 @@
                 </div>
                 <input type="submit" name="btn" value="ADD">
             </form>
+        </html>
             <?php
             //checkin if button is clicked
             if(isset($_POST['btn'])) //checkin if button is clicked
             {
                 $conn = mysqli_connect("localhost", "root", "");
                 //select database using function
-                mysqliselect_db($conn, "database1_example");
+                mysqli_select_db($conn, "database1_example");
                 $clients_name = $_POST['u_name'];
-                $clients_email = $_{PST['email']};
+                $clients_email = $_POST['email'];
                 $clients_comment = $_POST['content'];
 
-                $query = mysql_query($conn, "INSERT INTO clients(name, email, comment)VALUES('$clients_name', '$clients_email', ,$clients_comment')");
+                $query = mysqli_query($conn, "INSERT INTO clients(name, email, comment)VALUES('$clients_name', '$clients_email', '$clients_comment')");
 
                 if($query == true)
                 {
