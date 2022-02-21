@@ -1,0 +1,25 @@
+#nav
+{margin-top: 20px;
+padding: 10px 0px 5px 0px;}
+#header
+{width:2700px;
+height:150px;
+border:1px solid black;}
+#content
+{width:2470px;
+height:300px;
+border:1px solid black;
+margin-left:230px;
+margin-top:20px;
+margin-bottom:20px;}
+#footer
+{width:2700px;
+height:500px;
+border:1px solid black;}
+#sidebar
+{width:200px;
+height:300px;
+border:1px solid black;
+float:left;
+margin-top:20px;
+margin-bottom:20px;}
