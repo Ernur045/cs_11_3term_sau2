@@ -2,20 +2,42 @@ body
 {
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
-  background-color: rgba(49, 46, 43)
+  background-color: rgba(49, 46, 43);
+  color: #efefef
+}
+
+a:link
+{
+  color: #efefef;
+  background-color: transparent;
+  text-decoration: none;
+  border-bottom: 1px solid #efefef
 }
   
+a:visited 
+{
+  color: #efefef;
+  background-color: transparent;
+  text-decoration: none;
+  border-bottom: 1px solid #efefef;
+}
+
+.line
+{
+  border: 2px solid gray;
+}
 .sidenav 
 {
-  height: 100%; /* Full-height: remove this if you want "auto" height */
+  height: 100%;
   width: 200px; /* Set the width of the sidebar */
   position: fixed; /* Fixed Sidebar (stay in place on scroll) */
   z-index: 1; /* Stay on top */
   top: 1; /* Stay at the top */
   left: 0;
-  background-color: rgb(24.5 , 23, 21.5); /* Black */
+  background-color: rgba(49, 46, 43); /* Black */
   overflow-x: hidden; /* Disable horizontal scroll */
   padding-top: 20px;
+  border-right: 1px solid #efefef;
 }
 
 .sidenav a {
@@ -35,6 +57,7 @@ body
 .main {
   margin-left: 160px; /* Same as the width of the sidebar */
   padding: 0px 10px;
+  border-left: 1px solid #efefef;
 }
 
 .topnav 
@@ -42,7 +65,6 @@ body
   align-items: center;
   overflow: hidden;
   background-color: rgb(12, 12, 12);
-  position: fixed;
   top: 0;
 }
   
@@ -93,6 +115,7 @@ body
 
 #video
 {
+  margin: 200px;
   align-self: center;
 }
 

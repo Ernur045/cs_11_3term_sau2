@@ -3,6 +3,56 @@
 <head>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="css.css" type="text/css"> 
+  <style>
+    
+#main {
+position:relative;
+margin: 100px auto;
+width: 660px;
+height:660px;
+border-radius:15px;
+}
+#scr {
+width: 660px;
+height: 660px;
+background-color: white;
+background-size:cover;
+border: 2px solid black;
+border-radius:10px;
+transition: 0.325s;
+}
+
+  </style>
+  <script>
+    
+var slider = {
+slides:['imgs/temir.jpg','imgs/danial.jpg','imgs/sultan.jpg'],
+frame:0, // текущий кадр для отбражения - индекс картинки из массива
+set: function(image) { // установка нужного фона слайдеру
+document.getElementById("scr").style.backgroundImage = "url("+image+")";
+},
+init: function() { // запуск слайдера с картинкой с нулевым индексом
+this.set(this.slides[this.frame]);
+},
+left: function() { // крутим на один кадр влево
+this.frame--;
+if(this.frame < 0) this.frame = this.slides.length-1;
+this.set(this.slides[this.frame]);
+},
+right: function() { // крутим на один кадр вправо
+this.frame++;
+if(this.frame == this.slides.length) this.frame = 0;
+this.set(this.slides[this.frame]);
+}
+};
+window.onload = function() { // запуск слайдера после загрузки документа
+slider.init();
+setInterval(function() { // ставим пятисекундный интервал для перелистывания картинок
+slider.right();
+},5000);
+  };
+
+</script>
 </head>
 <body>
 
@@ -14,11 +64,65 @@
   <a href="play.htm">Play</a>
   <a class="active" href="contact.htm">Contact</a>
   <a href="tournament.htm">Tournaments</a>
+  <a href="register.php">Register</a>
 </div>
 
 <div class="main">
   <h2>Last tournament</h2>
-  <p>Some content..</p>
+  <h3>Date: 23.02.2022</h3>
+  <h3>Courator: Yernur Kairollayev </h3>
+  <h3>Scoreboard:</h3>
+  <style type="text/css">
+    .tg  {border-collapse:collapse;border-spacing:0;}
+    .tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+      overflow:hidden;padding:10px 5px;word-break:normal;}
+    .tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+      font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+    .tg .tg-ihly{border-color:#efefef;color:#efefef;text-align:left;vertical-align:top}
+    .tg .tg-ell0{border-color:#efefef;color:#efefef;font-family:serif !important;text-align:left;vertical-align:top}
+    </style>
+    <table class="tg">
+    <thead>
+      <tr>
+        <th class="tg-ihly">place</th>
+        <th class="tg-ihly">username</th>
+        <th class="tg-ihly">score</th>
+        <th class="tg-ihly">medal</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="tg-ihly">1</td>
+        <td class="tg-ihly">Dr.Sheldor</td>
+        <td class="tg-ihly">859</td>
+        <td class="tg-ihly">gold</td>
+      </tr>
+      <tr>
+        <td class="tg-ihly">2</td>
+        <td class="tg-ihly">Spidey-tom</td>
+        <td class="tg-ihly">754</td>
+        <td class="tg-ihly">silver</td>
+      </tr>
+      <tr>
+        <td class="tg-ihly">3</td>
+        <td class="tg-ihly">Murdock_dd</td>
+        <td class="tg-ell0">6660</td>
+        <td class="tg-ihly">bronze</td>
+      </tr>
+      <tr>
+        <td class="tg-ihly">4</td>
+        <td class="tg-ihly">Ring-bearer</td>
+        <td class="tg-ihly">1178</td>
+        <td class="tg-ihly">none</td>
+      </tr>
+    </tbody>
+    </table>
+    <h2>Our top players</h2>
+    <body>
+      <div id="main">
+      <div id="scr" style="background-image: url(&quot;ch05.jpg&quot;);"></div>
+      </div>
+    </body>
 </div>
 
 </body>
