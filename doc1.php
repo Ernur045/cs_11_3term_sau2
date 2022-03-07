@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <link rel = "stylesheet" href="css.css" type="text/css"> 
+		<title>Super tic-tac-toe</title>
         <style>
             body {background-color: lightblue;}
             h1 {color: white; text-align: center;}
